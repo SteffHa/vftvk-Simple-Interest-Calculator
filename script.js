@@ -1,5 +1,8 @@
 function compute()
 {
+    var result = document.getElementById("result")
+    result.innerHTML = ""
+
     //fetch input values
     var principal = document.getElementById("principal").value;
     // validate input, set focus back to input field if value is not positive
@@ -17,7 +20,6 @@ function compute()
     // calculate year when intereset returns
     var year = new Date().getFullYear()+parseInt(years);
     // print result message
-    var result = document.getElementById("result")
     result.innerHTML = `
     If you deposit <mark>${principal}</mark>,<br>
     at an interest rate of <mark>${rate}%</mark>.<br>
